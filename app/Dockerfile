@@ -33,6 +33,8 @@ RUN mkdir matterreader && \
     npm install @throneless/hubot-file-brain && \
     npm install hubot-rss-reader
 
+ADD hubot-rss-reader.coffee /home/hubot/matterreader/node_modules/hubot-rss-reader/scripts/hubot-rss-reader.coffee
+
 WORKDIR /home/hubot/matterreader
 CMD ["-a", "mattermost"]
 ENTRYPOINT ["./bin/hubot"]
